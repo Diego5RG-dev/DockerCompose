@@ -1,4 +1,4 @@
 <h1 align="center">   Tareas de Docker Compose </h1> <br>
 <p align="center">
-    <img alt="logo" title="logo" src="https://github.com/Diego5RG-dev/DockerCompose/blob/main/recursosDockerCompose/logo.jpg "width="450">
+    <img alt="logo" title="logo" src="https://github.com/Diego5RG-dev/DockerCompose/blob/main/recursosDockerCompose/logo.jpg "width="75%">
 </p>
