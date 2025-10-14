@@ -68,7 +68,7 @@ Lo que aparece en esta imagen es una comprobación (o chequeo) de Docker Compose
 
 Aquí lanzamos el comando docker compose up para generar los contenedores, y como vemos, no nos da fallo.
 
-p align="center">
+<p align="center">
     <img alt="phpmyadmin" title="phpmyadmin" src="https://github.com/Diego5RG-dev/DockerCompose/blob/main/recursosDockerCompose/phpmyadmin.png " width="75%">
 </p>
 
