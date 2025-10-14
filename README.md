@@ -63,7 +63,7 @@ p align="center">
 Lo que aparece en esta imagen es una comprobación (o chequeo) de Docker Compose para que valide que está bien escrito. Si hubiera algún aviso (warning) o algo, aparecería aquí.
 
 p align="center">
-    <img alt="dockerUP" title="dockerUP" src="https://github.com/Diego5RG-dev/DockerCompose/blob/main/recursosDockerCompose/dockerUP.png " width="75%">
+    <img alt="dockerUP" title="dockerUP" src="https://github.com/Diego5RG-dev/DockerCompose/blob/main/recursosDockerCompose/dockerUP.png " width="85%">
 </p>
 
 Aquí lanzamos el comando docker compose up para generar los contenedores, y como vemos, no nos da fallo.
