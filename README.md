@@ -73,3 +73,8 @@ Aquí lanzamos el comando docker compose up para generar los contenedores, y com
 </p>
 
 Por último, comprobamos que se crearon las tablas en phpMyAdmin y la base de datos para comprobar que todo ha salido bien y lo tenemos corriendo.
+
+<p align="center">
+    <img alt="ultima" title="ultima" src="https://github.com/Diego5RG-dev/DockerCompose/blob/main/recursosDockerCompose/ultima.png " width="75%">
+</p>
+
