@@ -1,0 +1,65 @@
+services:
+  prestashop:
+    image: prestashop/prestashop
+    ports:
+      - "8081:80"
+    environment: 
+      - DB_SERVER=db
+      - DB_USER=${MYSQL_USER}
+      - DB_PASSWD=${MYSQL_PASSWORD}
+      - DB_NAME=${MYSQL_DATABASE}
+      - PS_INSTALL_AUTO=1
+      - PS_DOMAIN=${PS_DOMAIN}
+      - PS_COUNTRY=es
+      - PS_LANGUAGE=es
+      - ADMIN_MAIL=${ADMIN_MAIL}
+      - ADMIN_PASSWD=${ADMIN_PASSWD}
+      - PS_FOLDER_INSTALL=install-dev
+      - PS_FOLDER_ADMIN=admin-dev
+    volumes: 
+      - prestashop_data:/var/www/html
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - backend_network
+    restart: always
+
+  db:
+    image: mariadb:10.6
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - backend_network
+    restart: always
+
+  phpmyadmin:
+    image: phpmyadmin:5
+    ports:
+      - 8080:80
+    environment:
+      - PMA_HOST=db
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - backend_network
+    restart: always
+
+volumes:
+  prestashop_data:
+  mysql_data:
+
+networks:
+  backend_network:
