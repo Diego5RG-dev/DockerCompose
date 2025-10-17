@@ -57,7 +57,7 @@ Comprobaciones y ejecución.
 En este apartado realizaremos las comprobaciones de que nuestro Docker Compose funciona correctamente.
 
 <p align="center">
-    <img alt="chequep" title="chequep" src="https://github.com/Diego5RG-dev/DockerCompose/blob/main/recursosDockerCompose/chequep.png " width="75%">
+    <img alt="chequeo" title="chequeo" src="https://github.com/Diego5RG-dev/DockerCompose/blob/main/recursosDockerCompose/chequeo.png " width="75%">
 </p>
 
 Lo que aparece en esta imagen es una comprobación (o chequeo) de Docker Compose para que valide que está bien escrito. Si hubiera algún aviso (warning) o algo, aparecería aquí.
